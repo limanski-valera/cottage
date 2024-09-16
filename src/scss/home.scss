@@ -1,0 +1,138 @@
+.main-block {
+	min-height: 100svh;
+	position: relative;
+	padding: toRem(150) 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	color: $whiteColor;
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgb(89, 86, 86, 0.7);
+		z-index: 2;
+	}
+	&__container {
+		position: relative;
+		z-index: 3;
+	}
+	&__offer {
+		text-align: center;
+		max-width: toRem(650);
+	}
+	&__sub-title {
+		text-transform: uppercase;
+		color: $accentColor;
+		text-shadow: 0 4px 4px #00000035;
+		&:not(:last-child) {
+			margin-bottom: toRem(10);
+		}
+	}
+	&__title {
+		@include adaptiveValue('font-size', 72, 32);
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+	}
+	&__text {
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+	}
+	&__action {
+		align-self: center;
+		display: inline-flex;
+		flex-direction: column;
+		gap: toRem(15);
+		align-items: center;
+		text-align: center;
+		color: $accentColor;
+		transition: color 0.3s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $accentLightColor;
+			}
+		}
+	}
+	&__action-button {
+		width: toRem(50);
+		height: toRem(50);
+		padding-left: toRem(2);
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: toRem(28);
+		background-color: $accentColor;
+		color: $whiteColor;
+		position: relative;
+		transition: background-color 0.3s;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $accentLightColor;
+			}
+		}
+		&:active {
+			background-color: $accentLightColor;
+		}
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			background-color: $accentLightColor;
+			z-index: -1;
+		}
+		&::before {
+			animation: playCircleBefore 1.5s infinite linear;
+		}
+		&::after {
+			animation: playCircleAfter 1.5s infinite linear 1s;
+		}
+	}
+	&__action-text {
+	}
+	&__button {
+		position: fixed;
+		left: 50%;
+		bottom: toRem(30);
+		transform: translateX(-50%);
+		z-index: 5;
+	}
+}
+@keyframes playCircleBefore {
+	0% {
+		scale: 1;
+		opacity: 1;
+	}
+	100% {
+		scale: 1.4;
+		opacity: 0;
+	}
+}
+@keyframes playCircleAfter {
+	0% {
+		scale: 1;
+		opacity: 1;
+	}
+	100% {
+		scale: 1.7;
+		opacity: 0;
+	}
+}

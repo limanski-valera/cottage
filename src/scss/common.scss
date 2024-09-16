@@ -1,0 +1,171 @@
+// Заголовки, загальні БЕМ блоки та інше...
+.link {
+	transition: color 0.3s;
+	@media (any-hover: hover) {
+		&:hover {
+			color: $accentColor;
+		}
+	}
+	&:active {
+		color: $accentColor;
+	}
+}
+.text {
+	line-height: 1.7;
+}
+.title {
+	line-height: 1.3;
+	@include adaptiveValue('font-size', 30, 22);
+}
+
+.sub-title {
+	@include adaptiveValue('font-size', 22, 16);
+}
+.accent {
+	color: $accentColor;
+}
+.full-image {
+	position: relative;
+	padding-bottom: 30%;
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+.page {
+	padding-top: toRem(110);
+	&__title {
+		max-width: $containerWidth;
+		padding: 0 toRem(15);
+		text-align: center;
+
+		&:not(:last-child) {
+			margin-bottom: toRem(50);
+		}
+	}
+}
+//========================================================================================================================================================
+.text-block {
+	p:not(:last-child) {
+		margin-bottom: toRem(10);
+	}
+	ol {
+		padding-left: toRem(18);
+		&:not(:last-child) {
+			margin-bottom: toRem(30);
+		}
+	}
+	li:not(:last-child) {
+		margin-bottom: toRem(10);
+	}
+	ul {
+		&:not(:last-child) {
+			margin-bottom: toRem(30);
+		}
+		li {
+			position: relative;
+			display: flex;
+			gap: toRem(5);
+			align-items: flex-start;
+			&:not(:last-child) {
+				margin-bottom: toRem(5);
+			}
+			&::before {
+				content: '';
+				width: toRem(5);
+				height: toRem(5);
+				background-color: $accentColor;
+				border-radius: 50%;
+				margin-top: toRem(10);
+			}
+		}
+	}
+}
+//========================================================================================================================================================
+.swiper-pagination-bullets {
+	display: flex;
+	gap: toRem(5);
+	justify-content: center;
+}
+.swiper-pagination-bullet {
+	width: toRem(40);
+	height: toRem(4);
+	border-radius: 10px;
+	background-color: $accentColor;
+	opacity: 0.3;
+	cursor: pointer;
+	transition: opacity 0.3s;
+	@media (max-width: $mobile) {
+		width: toRem(30);
+		height: toRem(3);
+	}
+}
+
+.swiper-pagination-bullet-active {
+	opacity: 1;
+	pointer-events: none;
+}
+//========================================================================================================================================================
+.call__button {
+	position: fixed;
+	bottom: toRem(20);
+	right: toRem(20);
+	width: toRem(70);
+	height: toRem(70);
+	border-radius: 50%;
+	background-color: $accentColor;
+	color: $whiteColor;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: toRem(32);
+	z-index: 100;
+	@media (max-width: $mobile) {
+		width: toRem(50);
+		height: toRem(50);
+		font-size: toRem(24);
+	}
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border-radius: 50%;
+		background-color: $accentLightColor;
+		z-index: -1;
+	}
+	&::before {
+		animation: playCircleBefore 1.5s infinite linear;
+	}
+	&::after {
+		animation: playCircleAfter 1.5s infinite linear 1s;
+	}
+}
+.call__icon {
+	animation: 5s linear infinite callIcon;
+	display: inline-block;
+}
+@keyframes callIcon {
+	0% {
+		transform: rotate(0);
+	}
+	90% {
+		transform: translate(0);
+	}
+	93% {
+		transform: rotate(-15deg);
+	}
+	96% {
+		transform: rotate(10deg);
+	}
+	100% {
+		transform: rotate(0);
+	}
+}

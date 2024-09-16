@@ -1,0 +1,125 @@
+.menu {
+	&::after {
+		content: '';
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		transition: left 0.3s;
+		pointer-events: none;
+		background-color: $mainColor;
+		opacity: 0;
+		z-index: -1;
+		transition: opacity 0.3s;
+		.menu-open & {
+			opacity: 0.7;
+		}
+	}
+	&__icon {
+	}
+	&__body {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		left: -100%;
+		top: 0;
+		overflow: auto;
+		padding: toRem(130) toRem(15) toRem(15) toRem(30);
+		transition: left 0.3s;
+		background-color: $bgColor;
+		color: $mainColor;
+		&::before {
+			content: '';
+			position: fixed;
+			width: 100%;
+			height: toRem(130);
+			left: -100%;
+			top: 0;
+			transition: left 0.3s;
+			z-index: 2;
+			background-color: $bgColor;
+			@media (min-width: $mobile) {
+				max-width: toRem(600);
+			}
+		}
+		.menu-open & {
+			left: 0;
+			&::before {
+				left: 0;
+			}
+		}
+		@media (min-width: $mobile) {
+			max-width: toRem(600);
+		}
+	}
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: toRem(15);
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+	}
+	&__item {
+		&._active {
+			color: $accentColor;
+		}
+	}
+	&__link {
+		font-size: toRem(20);
+	}
+}
+.icon-menu {
+	display: block;
+	position: relative;
+	width: toRem(30);
+	height: toRem(18);
+	z-index: 5;
+	@media (any-hover: none) {
+		cursor: default;
+	}
+	span,
+	&::before,
+	&::after {
+		content: '';
+		transition: all 0.3s ease 0s;
+		right: 0;
+		position: absolute;
+		width: 100%;
+		height: toRem(2);
+		background-color: $mainColor;
+		border-radius: 10px;
+		.header--transparent & {
+			background-color: $whiteColor;
+			.menu-open & {
+				background-color: $mainColor;
+			}
+		}
+	}
+	&::before {
+		top: 0;
+	}
+	&::after {
+		bottom: 0;
+	}
+	span {
+		top: calc(50% - toRem(1));
+	}
+	.menu-open & {
+		span {
+			width: 0;
+		}
+		&::before,
+		&::after {
+		}
+		&::before {
+			top: calc(50% - toRem(1));
+			transform: rotate(-45deg);
+		}
+		&::after {
+			bottom: calc(50% - toRem(1));
+			transform: rotate(45deg);
+		}
+	}
+}

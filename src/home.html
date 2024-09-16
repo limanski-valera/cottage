@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+	@@include('html/_head.htm',{ "title":"Головна" })
+	<body>
+		<div class="wrapper">
+			@@include('html/_header-transparent.htm',{})
+			<main class="home-page">
+				<section class="main-block">
+					<img src="@img/cottage/01.jpg" alt="cottage" />
+					<div class="main-block__container">
+						<div class="main-block__offer">
+							<h2 class="main-block__sub-title">Prydesennya ECO Village</h2>
+							<h1 class="main-block__title">Дім, в якому хочеться жити</h1>
+							<div class="main-block__text text">
+								Еко-містечко на 7 гектарах землі на берегу Десни в 20 хвилинах від Києва. Оберіть таунхаус, дуплекс чи котедж або розпочніть власний бізнес в комерції Prydesennya Eco
+								Village.
+							</div>
+							<button type="button" data-popup="#video" data-popup-youtube="K-_29IrHutg" class="main-block__action">
+								<span class="main-block__action-button">
+									<span class="_icon-play"></span>
+								</span>
+								<span class="main-block__action-text">Відеообліт</span>
+							</button>
+						</div>
+					</div>
+					<a href="generalniy-plan.html" class="main-block__button button button--transperent">Генеральний план</a>
+				</section>
+			</main>
+		</div>
+		@@include('html/_call-button.htm',{})
+		@@include('html/_popup.htm',{})
+		@@include('html/_popup-video.htm',{})
+		@@include('html/_popup-contacts.htm',{})
+		@@include('html/_js.htm',{})
+	</body>
+</html>

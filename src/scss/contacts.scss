@@ -1,0 +1,111 @@
+.map {
+	position: relative;
+	padding-bottom: 40%;
+	iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+//========================================================================================================================================================
+.team {
+	@include adaptiveValue('padding-top', 100, 50);
+	@include adaptiveValue('padding-bottom', 100, 50);
+	&__container {
+	}
+	&__title {
+		margin-bottom: toRem(50);
+		text-align: center;
+	}
+	&__slider {
+	}
+	&__wrapper {
+		margin-bottom: toRem(30);
+	}
+	&__slide {
+	}
+	&__person {
+		display: flex;
+		flex-direction: column;
+		gap: toRem(0);
+	}
+	&__avatar {
+		align-self: center;
+		width: toRem(100);
+		height: toRem(100);
+		border-radius: 50%;
+		overflow: hidden;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__person-data {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		gap: toRem(5);
+	}
+	&__person-name {
+	}
+	&__person-position {
+		color: $textLightColor;
+	}
+	&__buttons {
+		display: flex;
+		justify-content: center;
+		gap: toRem(10);
+	}
+}
+//========================================================================================================================================================
+.partners {
+	background: url('@img/townhouse-92m/01.jpg') center center / cover no-repeat;
+	position: relative;
+	@include adaptiveValue('padding-top', 100, 50);
+	@include adaptiveValue('padding-bottom', 100, 50);
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgb(89, 86, 86, 0.7);
+	}
+	&__container {
+		position: relative;
+		z-index: 2;
+	}
+	&__body {
+		border-radius: 10px;
+		background-color: $whiteColor;
+		padding: toRem(50) toRem(15);
+		box-shadow: 0 0 10px $textLightColor;
+	}
+	&__heading {
+		text-align: center;
+		max-width: toRem(600);
+		margin: 0 auto;
+		&:not(:last-child) {
+			margin-bottom: toRem(50);
+		}
+	}
+	&__title {
+	}
+	&__text {
+	}
+	&__slider {
+	}
+	&__wrapper {
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+	}
+	&__slide {
+	}
+}

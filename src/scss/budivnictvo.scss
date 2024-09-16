@@ -1,0 +1,175 @@
+.budivnyctvo {
+	padding-top: toRem(50);
+	&__container {
+	}
+	&__heading {
+		@include adaptiveValue('margin-bottom', 70, 40);
+		@media (min-width: $pc) {
+			display: flex;
+			gap: toRem(30);
+			align-items: flex-end;
+		}
+	}
+	&__offer {
+		max-width: toRem(400);
+		@media (max-width: $pc) {
+			&:not(:last-child) {
+				margin-bottom: toRem(30);
+			}
+		}
+	}
+	&__road {
+		flex: 1 1 auto;
+	}
+}
+.offer-budivnyctvo {
+	display: flex;
+	flex-direction: column;
+	gap: toRem(15);
+	&__title {
+	}
+	&__text {
+	}
+	&__button {
+	}
+}
+.road {
+	@media (max-width: $tablet) {
+		overflow-x: auto;
+		overflow-y: hidden;
+		padding-bottom: toRem(10);
+	}
+	&__label {
+		width: 100%;
+		text-align: center;
+		color: $textLightColor;
+		margin-bottom: toRem(60);
+	}
+	&__text {
+	}
+	&__months {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		gap: toRem(15);
+		font-size: toRem(12);
+	}
+	&__month {
+		display: flex;
+		flex-direction: column;
+		gap: toRem(30);
+		align-items: center;
+		position: relative;
+		&--active {
+			&::before {
+				content: '';
+				position: absolute;
+				left: 50%;
+				bottom: calc(100% + 15px);
+				transform: translateX(-50%);
+				width: toRem(1);
+				height: toRem(30);
+				background-color: $textLightColor;
+				border-radius: 10px;
+			}
+		}
+	}
+	&__circle {
+		display: inline-block;
+		width: toRem(10);
+		height: toRem(10);
+		border-radius: 50%;
+		background-color: $textLightColor;
+		position: relative;
+		.road__month:not(:last-child) &::after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			height: toRem(1);
+			background-color: $textLightColor;
+			width: toRem(45);
+			left: calc(100% + toRem(10));
+			border-radius: 10px;
+		}
+		.road__month--old & {
+			background-color: $accentColor;
+		}
+		.road__month--active & {
+			background-color: transparent;
+			&::before {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				width: toRem(20);
+				height: toRem(20);
+				border-radius: 50%;
+				transform: translate(-50%, -50%);
+				border: 5px solid $accentColor;
+			}
+		}
+	}
+	&__month-name {
+	}
+}
+
+.budivnyctvo {
+	&__slider-wrapper {
+	}
+	&__sliders {
+		&:not(:last-child) {
+			margin-bottom: toRem(10);
+		}
+		@media (min-width: $mobile) {
+			display: flex;
+			gap: toRem(15);
+		}
+	}
+	&__swiper {
+		&--big {
+			flex: 0 0 70%;
+			@media (min-width: $mobile) {
+				height: toRem(500);
+			}
+			@media (max-width: $mobile) {
+				margin-bottom: toRem(10);
+			}
+		}
+		&--small {
+			flex: 1 1 auto;
+
+			@media (min-width: $mobile) {
+				height: toRem(500);
+			}
+		}
+	}
+	&__swiper-wrpper {
+	}
+	&__swiper-slide {
+		border-radius: 10px;
+		overflow: hidden;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__slider-actives {
+		display: flex;
+		align-items: center;
+		gap: toRem(50);
+	}
+	&__slider-buttons {
+	}
+}
+.swiper-button-prev {
+}
+.button {
+	&--circle {
+	}
+}
+._icon-arrow-left {
+}
+.swiper-button-next {
+}
+._icon-arrow-right {
+}

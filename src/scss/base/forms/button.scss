@@ -1,0 +1,79 @@
+//<BUTTONS (a.btn+tab)>
+// Сніппет (HTML): btn
+
+.button {
+	display: inline-flex;
+	gap: toRem(10);
+	padding: toRem(16) toRem(22.5);
+	border-radius: toRem(4);
+	color: $whiteColor;
+	font-size: toRem(14);
+	border: 1px solid transparent;
+	transition:
+		border-color 0.3s,
+		box-shadow 0.3s,
+		background-color 0.3s,
+		backdrop-filter 0.3s,
+		opacity 0.3s;
+	font-family: 'Unbounded', sans-serif;
+	min-width: toRem(230);
+	justify-content: center;
+	@media (any-hover: hover) {
+		&:hover {
+		}
+	}
+	&--fw {
+		width: 100%;
+	}
+	&--transperent {
+		background-color: #24222340;
+		@media (any-hover: hover) {
+			&:hover {
+				border-color: $lightGrayColor;
+				backdrop-filter: blur(110px);
+			}
+		}
+		&:active {
+			border-color: $lightGrayColor;
+			backdrop-filter: blur(110px);
+		}
+	}
+	&--gold {
+		border: none;
+		box-shadow:
+			0 5px 15px 0 rgba(185, 130, 73, 0.15),
+			0 2px 4px 0 rgba(195, 140, 83, 0.2);
+		background-color: $accentColor;
+		text-shadow: 0 4px 4px #00000025;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $accentLightColor;
+				box-shadow: inset 5px 4px 10px #915a21;
+			}
+		}
+		&:active {
+			background-color: $accentLightColor;
+		}
+	}
+	&--circle {
+		padding: toRem(15);
+		box-shadow:
+			0 5px 15px 0 rgba(185, 130, 73, 0.15),
+			0 2px 4px 0 rgba(195, 140, 83, 0.2);
+		background-color: $accentColor;
+		min-width: 0;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $accentLightColor;
+				box-shadow: inset 5px 4px 10px #915a21;
+			}
+		}
+		&:active {
+			background-color: $accentLightColor;
+		}
+		&.swiper-button-disabled {
+			pointer-events: none;
+			opacity: 0.5;
+		}
+	}
+}

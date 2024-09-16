@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+	@@include('html/_head.htm',{ "title":"Блог" })
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page">
+				<section class="blog">
+					<div class="blog__container">
+						<h1 class="blog__title title">Блог</h1>
+						<ul class="blog__list">
+							<li class="blog__item">
+								<article class="blog__card card-blog">
+									<a href="blog-item.html" class="card-blog__image"> <img src="@img/townhouse-68m/01.jpg" alt="" /></a>
+									<div class="card-blog__content">
+										<time datetime="04-05-2022" class="accent">04-05-2022</time>
+										<h2 class="card-blog__title">
+											<a class="link" href="blog-item.html">Нові реалії, нові умови роботи. Ділимось</a>
+										</h2>
+										<div class="card-blog__text text">
+											<p>
+												Минули перші два місяці війни і будівельний бізнес почав поступово повертатися до життя спочатку у західних регіонах, а відтепер, і в Київській області.
+												Всі ми знаходимось в нових реаліях та…
+											</p>
+										</div>
+										<a href="blog-item.html" class="card-blog__button button button--gold">Читати</a>
+									</div>
+								</article>
+							</li>
+						</ul>
+					</div>
+				</section>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_popup-video.htm',{}) @@include('html/_js.htm',{})
+	</body>
+</html>
