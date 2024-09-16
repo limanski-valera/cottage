@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Unbounded:200,300,regular&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Inter:200,300,regular&display=swap);
 @font-face {
   font-family: icons;
   font-display: swap;
@@ -84,9 +84,9 @@ html {
   min-width: 360px
 }
 body {
-  color: #313030;
+  color: #434441;
   line-height: 1;
-  font-family: Unbounded;
+  font-family: Inter;
   font-size: .875rem;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
@@ -97,7 +97,7 @@ body {
 button,
 input,
 textarea {
-  font-family: Unbounded;
+  font-family: Inter;
   font-size: inherit;
   line-height: inherit;
   color: inherit;
@@ -204,20 +204,20 @@ body {
 .button--gold {
   border: none;
   box-shadow: 0 5px 15px 0 rgba(185,130,73,.15),0 2px 4px 0 rgba(195,140,83,.2);
-  background-color: #c38c53;
+  background-color: #e2b771;
   text-shadow: 0 4px 4px rgba(0,0,0,.1450980392)
 }
 .button--gold:active {
-  background-color: #af783f
+  background-color: #bc9658
 }
 .button--circle {
   padding: .9375rem;
   box-shadow: 0 5px 15px 0 rgba(185,130,73,.15),0 2px 4px 0 rgba(195,140,83,.2);
-  background-color: #c38c53;
+  background-color: #e2b771;
   min-width: 0
 }
 .button--circle:active {
-  background-color: #af783f
+  background-color: #bc9658
 }
 .button--circle.swiper-button-disabled {
   pointer-events: none;
@@ -253,7 +253,7 @@ textarea {
 }
 .input:focus {
   outline: 0;
-  border-bottom-color: #c38c53
+  border-bottom-color: #e2b771
 }
 .input[placeholder]:not([data-placeholder-nohiden])::-webkit-input-placeholder {
   -webkit-transition: opacity .3s;
@@ -291,7 +291,7 @@ textarea.input {
   height: 9.375rem
 }
 textarea.input:focus {
-  border-color: #c38c53
+  border-color: #e2b771
 }
 .menu::after {
   content: "";
@@ -302,7 +302,7 @@ textarea.input:focus {
   width: 100%;
   transition: left .3s;
   pointer-events: none;
-  background-color: #313030;
+  background-color: #434441;
   opacity: 0;
   z-index: -1;
   transition: opacity .3s
@@ -320,7 +320,7 @@ textarea.input:focus {
   padding: 8.125rem .9375rem .9375rem 1.875rem;
   transition: left .3s;
   background-color: #fcfcf7;
-  color: #313030
+  color: #434441
 }
 .menu__body::before {
   content: "";
@@ -348,7 +348,7 @@ textarea.input:focus {
   margin-bottom: 1.25rem
 }
 .menu__item._active {
-  color: #c38c53
+  color: #e2b771
 }
 .menu__link {
   font-size: 1.25rem
@@ -369,7 +369,7 @@ textarea.input:focus {
   position: absolute;
   width: 100%;
   height: .125rem;
-  background-color: #313030;
+  background-color: #434441;
   border-radius: 10px
 }
 .header--transparent .icon-menu span,
@@ -380,7 +380,7 @@ textarea.input:focus {
 .menu-open .header--transparent .icon-menu span,
 .menu-open .header--transparent .icon-menu::after,
 .menu-open .header--transparent .icon-menu::before {
-  background-color: #313030
+  background-color: #434441
 }
 .icon-menu::before {
   top: 0
@@ -515,8 +515,8 @@ body::after {
   transition: color .3s,border-color .3s
 }
 .tabs__title._tab-active {
-  border: 1px solid #c38c53;
-  color: #c38c53
+  border: 1px solid #e2b771;
+  color: #e2b771
 }
 .ibg {
   width: 100%;
@@ -548,7 +548,7 @@ body::after {
   transition: color .3s
 }
 .link:active {
-  color: #c38c53
+  color: #e2b771
 }
 .text {
   line-height: 1.7
@@ -557,7 +557,7 @@ body::after {
   line-height: 1.3
 }
 .accent {
-  color: #c38c53
+  color: #e2b771
 }
 .full-image {
   position: relative;
@@ -611,7 +611,7 @@ body::after {
   content: "";
   width: .3125rem;
   height: .3125rem;
-  background-color: #c38c53;
+  background-color: #e2b771;
   border-radius: 50%;
   margin-top: .625rem
 }
@@ -624,7 +624,7 @@ body::after {
   width: 2.5rem;
   height: .25rem;
   border-radius: 10px;
-  background-color: #c38c53;
+  background-color: #e2b771;
   opacity: .3;
   cursor: pointer;
   transition: opacity .3s
@@ -640,7 +640,7 @@ body::after {
   width: 4.375rem;
   height: 4.375rem;
   border-radius: 50%;
-  background-color: #c38c53;
+  background-color: #e2b771;
   color: #fff;
   display: flex;
   justify-content: center;
@@ -657,7 +657,7 @@ body::after {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background-color: #af783f;
+  background-color: #bc9658;
   z-index: -1
 }
 .call__button::before {
@@ -731,7 +731,7 @@ body::after {
 }
 .header._header-scroll {
   background-color: #fcfcf7;
-  box-shadow: 0 0 15px #313030
+  box-shadow: 0 0 15px #434441
 }
 .header__container {
   display: grid;
@@ -787,8 +787,8 @@ body::after {
   transition: color .3s,border-color .3s,transform .3s,-webkit-transform .3s
 }
 .society__link:active {
-  border-color: #313030;
-  color: #313030;
+  border-color: #434441;
+  color: #434441;
   -webkit-transform: translateY(-3px);
   transform: translateY(-3px)
 }
@@ -797,8 +797,8 @@ body::after {
   color: #fff
 }
 .menu-open .header--transparent .society__link {
-  border-color: #313030;
-  color: #313030
+  border-color: #434441;
+  color: #434441
 }
 .communication__phone-link {
   display: flex;
@@ -813,10 +813,10 @@ body::after {
   font-size: 1.125rem
 }
 .communication__phone-number:active {
-  color: #c38c53
+  color: #e2b771
 }
 .communication__description {
-  color: #c38c53;
+  color: #e2b771;
   text-transform: uppercase;
   font-size: .75rem
 }
@@ -865,7 +865,7 @@ body::after {
   column-gap: 2.5rem
 }
 .menu-footer__item._active {
-  color: #c38c53
+  color: #e2b771
 }
 .menu-footer__link {
   font-size: .75rem
@@ -885,7 +885,7 @@ body::after {
 }
 .contacts-footer__icon {
   font-size: 1.5rem;
-  color: #c38c53;
+  color: #e2b771;
   flex: 0 0 auto
 }
 .main-block {
@@ -926,7 +926,7 @@ body::after {
 }
 .main-block__sub-title {
   text-transform: uppercase;
-  color: #c38c53;
+  color: #e2b771;
   text-shadow: 0 4px 4px rgba(0,0,0,.2078431373)
 }
 .main-block__sub-title:not(:last-child) {
@@ -945,7 +945,7 @@ body::after {
   gap: .9375rem;
   align-items: center;
   text-align: center;
-  color: #c38c53;
+  color: #e2b771;
   transition: color .3s
 }
 .main-block__action-button {
@@ -957,13 +957,13 @@ body::after {
   justify-content: center;
   align-items: center;
   font-size: 1.75rem;
-  background-color: #c38c53;
+  background-color: #e2b771;
   color: #fff;
   position: relative;
   transition: background-color .3s
 }
 .main-block__action-button:active {
-  background-color: #af783f
+  background-color: #bc9658
 }
 .main-block__action-button::after,
 .main-block__action-button::before {
@@ -974,7 +974,7 @@ body::after {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background-color: #af783f;
+  background-color: #bc9658;
   z-index: -1
 }
 .main-block__action-button::before {
@@ -1068,7 +1068,7 @@ body::after {
   display: inline-block;
   z-index: 90;
   background-color: #fcfcf7;
-  box-shadow: 0 0 5px #313030;
+  box-shadow: 0 0 5px #434441;
   pointer-events: none;
   display: none;
   font-size: .75rem
@@ -1093,6 +1093,9 @@ body::after {
 }
 .booked path:first-child {
   fill: #ff9737
+}
+.about-page {
+  padding-top: 8.125rem
 }
 .desc-about-page__container {
   max-width: 31.25rem;
@@ -1441,7 +1444,7 @@ body::after {
   border-radius: 10px
 }
 .road__month--old .road__circle {
-  background-color: #c38c53
+  background-color: #e2b771
 }
 .road__month--active .road__circle {
   background-color: rgba(0,0,0,0)
@@ -1456,7 +1459,7 @@ body::after {
   border-radius: 50%;
   -webkit-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
-  border: 5px solid #c38c53
+  border: 5px solid #e2b771
 }
 .budivnyctvo__sliders:not(:last-child) {
   margin-bottom: .625rem
@@ -1511,12 +1514,12 @@ body::after {
   transition: color .3s,transform .3s,-webkit-transform .3s
 }
 .navigation__link:active {
-  color: #c38c53;
+  color: #e2b771;
   -webkit-transform: translateY(-5px);
   transform: translateY(-5px)
 }
 ._active .navigation__link {
-  color: #c38c53;
+  color: #e2b771;
   pointer-events: none
 }
 .navigation__link-decor {
@@ -1625,7 +1628,7 @@ body::after {
   border-collapse: collapse
 }
 .product-details__table-wrapper tr:nth-child(odd) {
-  background-color: #c38c53;
+  background-color: #e2b771;
   color: #fff
 }
 .product-details__table-wrapper th {
@@ -1634,7 +1637,7 @@ body::after {
   padding: .625rem
 }
 .product-details__table-wrapper th:not(:last-child) {
-  border-right: 1px solid #c38c53
+  border-right: 1px solid #e2b771
 }
 .design-product__heading {
   text-align: center
@@ -1690,14 +1693,14 @@ body::after {
   display: flex;
   align-items: flex-start;
   gap: .3125rem;
-  color: #c38c53
+  color: #e2b771
 }
 .results-zabudovnik__item-label::before {
   content: "";
   width: 1.25rem;
   height: .0625rem;
   border-radius: 10px;
-  background-color: #c38c53;
+  background-color: #e2b771;
   margin-top: .625rem;
   flex: 0 0 auto
 }
@@ -1737,7 +1740,7 @@ body::after {
 .achievments__label::before {
   content: "";
   height: .0625rem;
-  background-color: #c38c53;
+  background-color: #e2b771;
   border-radius: 10px
 }
 .map {
@@ -3103,18 +3106,18 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     backdrop-filter: blur(110px)
   }
   .button--gold:hover {
-    background-color: #af783f;
+    background-color: #bc9658;
     box-shadow: inset 5px 4px 10px #915a21
   }
   .button--circle:hover {
-    background-color: #af783f;
+    background-color: #bc9658;
     box-shadow: inset 5px 4px 10px #915a21
   }
   .tabs__title:hover {
-    color: #313030
+    color: #434441
   }
   .link:hover {
-    color: #c38c53
+    color: #e2b771
   }
   .header__logo {
     transition: scale .3s
@@ -3123,22 +3126,22 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     scale: 1.05
   }
   .society__link:hover {
-    border-color: #313030;
-    color: #313030;
+    border-color: #434441;
+    color: #434441;
     -webkit-transform: translateY(-3px);
     transform: translateY(-3px)
   }
   .communication__phone-number:hover {
-    color: #c38c53
+    color: #e2b771
   }
   .communication__messengers-link:hover {
     scale: 1.2
   }
   .main-block__action:hover {
-    color: #af783f
+    color: #bc9658
   }
   .main-block__action-button:hover {
-    background-color: #af783f
+    background-color: #bc9658
   }
   .active:hover path {
     fill: #477523
@@ -3154,7 +3157,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     scale: 1.05
   }
   .navigation__link:hover {
-    color: #c38c53;
+    color: #e2b771;
     -webkit-transform: translateY(-5px);
     transform: translateY(-5px)
   }
