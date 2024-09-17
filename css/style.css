@@ -717,6 +717,12 @@ body::after {
     transform: rotate(0)
   }
 }
+.recaptcha-element {
+  margin-bottom: .625rem
+}
+.error {
+  color: #712214
+}
 .header {
   padding: .9375rem 0;
   position: fixed;
@@ -1248,6 +1254,10 @@ body::after {
 }
 .form-consult__button {
   width: 100%
+}
+.form-consult .message {
+  text-align: center;
+  margin-top: .625rem
 }
 .blog {
   padding-top: 3.125rem

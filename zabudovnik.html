@@ -3,13 +3,47 @@
 
 <head>
 	<title>Забудовник</title>
-	<meta charset="UTF-8">
-	<meta name="format-detection" content="telephone=no">
+	<meta charset="UTF-8" />
+	<meta name="format-detection" content="telephone=no" />
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240916195540">
-	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240917121310" />
+	<link rel="shortcut icon" href="favicon.ico" />
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script type="text/javascript">
+		var widgetId1;
+		var widgetId2;
+		var widgetId3;
+		var widgetId4;
+		var onloadCallback = function() {
+			// Renders the HTML element with id 'example1' as a reCAPTCHA widget.
+			// The id of the reCAPTCHA widget is assigned to 'widgetId1'.
+			if (document.getElementById('widgetId1')) {
+				widgetId1 = grecaptcha.render('widgetId1', {
+					sitekey: '6LeXhkYqAAAAAF_4ZrFgjBoyYYL5504saLtYMi47',
+					theme: 'light',
+				});
+			}
+			if (document.getElementById('widgetId2')) {
+				widgetId2 = grecaptcha.render('widgetId2', {
+					sitekey: '6LeXhkYqAAAAAF_4ZrFgjBoyYYL5504saLtYMi47',
+					theme: 'light',
+				});
+			}
+			if (document.getElementById('widgetId3')) {
+				widgetId3 = grecaptcha.render('widgetId3', {
+					sitekey: '6LeXhkYqAAAAAF_4ZrFgjBoyYYL5504saLtYMi47',
+					theme: 'light',
+				});
+			}
+			if (document.getElementById('widgetId4')) {
+				widgetId3 = grecaptcha.render('widgetId4', {
+					sitekey: '6LeXhkYqAAAAAF_4ZrFgjBoyYYL5504saLtYMi47',
+					theme: 'light',
+				});
+			}
+		};
+	</script>
 </head>
 
 <body>
@@ -321,7 +355,9 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20240916195540"></script>
+	<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit&_v=20240917121310" async defer></script>
+	<script src="js/app.min.js?_v=20240917121310"></script>
+
 </body>
 
 </html>
