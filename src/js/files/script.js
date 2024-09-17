@@ -80,6 +80,23 @@ function initForms() {
 		widgetId4 && grecaptcha.reset(widgetId4);
 	}
 
+	async function sendToTelegram(message) {
+		const API_KEY = '7115900494:AAFwIzIx3FJnlZqH8bgcm93hZ8WhWavOotg';
+		const CHAT_ID = -1002386757471;
+		const URL = `https://api.telegram.org/bot${API_KEY}/sendMessage`;
+
+		return fetch(URL, {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify({
+				chat_id: CHAT_ID,
+				text: message,
+			}),
+		});
+	}
+
 	function initForm(form) {
 		form.addEventListener('submit', async (e) => {
 			e.preventDefault();
@@ -120,12 +137,16 @@ function initForms() {
 
 			setMessage(form, 'Незабаром ми з вами звʼяжемося!');
 
-			form.reset();
-			resetAllCaptchas();
+			const response = await sendToTelegram(message);
 
-			setTimeout(() => {
-				removeMessage(form);
-			}, 2000);
+			if (response.ok) {
+				form.reset();
+				resetAllCaptchas();
+
+				setTimeout(() => {
+					removeMessage(form);
+				}, 2000);
+			} else setMessage(form, 'Виникла помилка при відправленні.', true);
 		});
 	}
 
