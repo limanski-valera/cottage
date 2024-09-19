@@ -754,12 +754,14 @@ body::after {
   position: relative;
   z-index: 2
 }
+.header .custom-logo-link,
 .header__logo {
   position: relative;
   z-index: 2;
   display: block;
   width: 9.375rem
 }
+.header .custom-logo-link img,
 .header__logo img {
   width: 100%;
   max-height: 6.25rem
@@ -838,9 +840,11 @@ body::after {
 .communication__messengers-link:active {
   scale: 1.2
 }
+.footer .custom-logo-link,
 .footer__logo {
   width: 6.25rem
 }
+.footer .custom-logo-link img,
 .footer__logo img {
   max-width: 100%
 }
@@ -2577,6 +2581,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
 }
 @media (max-width:81.25em) {
+  .footer .custom-logo-link,
   .footer__logo {
     width: 9.375rem;
     display: block;
@@ -2637,6 +2642,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .header__society:not(:last-child) {
     margin-bottom: 1.25rem
   }
+  .header .custom-logo-link img,
   .header__logo img {
     max-height: 4.375rem
   }
@@ -2998,9 +3004,11 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .link:hover {
     color: #e2b771
   }
+  .header .custom-logo-link,
   .header__logo {
     transition: scale .3s
   }
+  .header .custom-logo-link:hover,
   .header__logo:hover {
     scale: 1.05
   }
