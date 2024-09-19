@@ -1146,49 +1146,15 @@ body::after {
 .info-about__main {
   display: flex;
   flex-direction: column;
-  gap: 1.875rem
+  gap: 1.875rem;
+  text-align: center;
+  max-width: 43.75rem;
+  margin: 0 auto
 }
 .info-about__titles {
   display: flex;
   flex-direction: column;
   gap: .625rem
-}
-.bloquotes {
-  display: flex;
-  flex-direction: column;
-  gap: 1.875rem
-}
-.bloquotes__bloquote {
-  margin-bottom: 1.25rem;
-  display: block;
-  font-style: italic;
-  font-weight: 300
-}
-.bloquotes__author {
-  display: flex;
-  gap: .9375rem;
-  align-items: center
-}
-.bloquotes__avatar {
-  width: 3.125rem;
-  height: 3.125rem;
-  border-radius: 50%;
-  overflow: hidden
-}
-.bloquotes__avatar img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover
-}
-.bloquotes__author-info {
-  display: flex;
-  flex-direction: column;
-  gap: .3125rem
-}
-.bloquotes__author-position {
-  color: #abaaa7;
-  font-weight: 300
 }
 .swiper-slide img {
   width: 100%
@@ -1393,107 +1359,47 @@ body::after {
 .budivnyctvo {
   padding-top: 3.125rem
 }
-.budivnyctvo__offer {
-  max-width: 25rem
-}
-.budivnyctvo__road {
-  flex: 1 1 auto
-}
-.offer-budivnyctvo {
-  display: flex;
-  flex-direction: column;
-  gap: .9375rem
-}
-.road__label {
-  width: 100%;
+.budivnyctvo__title {
   text-align: center;
-  color: #abaaa7;
-  margin-bottom: 3.75rem
+  margin-bottom: 1.25rem
 }
-.road__months {
-  display: grid;
-  grid-template-columns: repeat(12,1fr);
-  gap: .9375rem;
-  font-size: .75rem
-}
-.road__month {
+.budivnyctvo__list {
+  max-width: 59.375rem;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 1.875rem;
-  align-items: center;
-  position: relative
+  gap: 3.125rem
 }
-.road__month--active::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: calc(100% + 15px);
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-  width: .0625rem;
-  height: 1.875rem;
-  background-color: #abaaa7;
-  border-radius: 10px
-}
-.road__circle {
-  display: inline-block;
-  width: .625rem;
-  height: .625rem;
-  border-radius: 50%;
-  background-color: #abaaa7;
-  position: relative
-}
-.road__month:not(:last-child) .road__circle::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  height: .0625rem;
-  background-color: #abaaa7;
-  width: 2.8125rem;
-  left: calc(100% + .625rem);
-  border-radius: 10px
-}
-.road__month--old .road__circle {
-  background-color: #e2b771
-}
-.road__month--active .road__circle {
-  background-color: rgba(0,0,0,0)
-}
-.road__month--active .road__circle::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 1.25rem;
-  height: 1.25rem;
-  border-radius: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  border: 5px solid #e2b771
-}
-.budivnyctvo__sliders:not(:last-child) {
-  margin-bottom: .625rem
-}
-.budivnyctvo__swiper--big {
-  flex: 0 0 70%
-}
-.budivnyctvo__swiper--small {
-  flex: 1 1 auto
-}
-.budivnyctvo__swiper-slide {
+.card-budivnyctvo__image {
   border-radius: 10px;
-  overflow: hidden
+  overflow: hidden;
+  box-shadow: 0 0 10px #abaaa7;
+  padding-bottom: 40%;
+  position: relative
 }
-.budivnyctvo__swiper-slide img {
+.card-budivnyctvo__image img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover
 }
-.budivnyctvo__slider-actives {
+.card-budivnyctvo__content {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1.25rem;
+  margin: -6.25rem 3.125rem 0;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 0 10px #abaaa7;
   display: flex;
-  align-items: center;
-  gap: 3.125rem
+  flex-direction: column;
+  gap: .625rem
+}
+.card-budivnyctvo__date {
+  color: #abaaa7
 }
 .product__navigation {
   padding-top: 3.125rem
@@ -1726,7 +1632,8 @@ body::after {
 .achievments__list {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.875rem
+  gap: 1.875rem;
+  justify-content: center
 }
 .achievments__item {
   display: flex;
@@ -1738,14 +1645,11 @@ body::after {
   background-color: #fff;
   box-shadow: 0 0 10px #abaaa7
 }
-.achievments__count {
-  font-size: 2.25rem
-}
 .achievments__label {
-  font-weight: 300;
   display: flex;
   flex-direction: column;
-  gap: .625rem
+  gap: .625rem;
+  text-transform: uppercase
 }
 .achievments__label::before {
   content: "";
@@ -2499,16 +2403,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     z-index: 2;
     background-color: #fff
   }
-  .budivnyctvo__sliders {
-    display: flex;
-    gap: .9375rem
-  }
-  .budivnyctvo__swiper--big {
-    height: 31.25rem
-  }
-  .budivnyctvo__swiper--small {
-    height: 31.25rem
-  }
   .main-product__container {
     display: flex;
     gap: 3.125rem;
@@ -2544,12 +2438,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
 }
 @media (min-width:61.99875em) {
-  .info-about__container {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 6.25rem;
-    align-items: center
-  }
   .consult__window {
     padding: 3.625rem 6.5625rem;
     display: flex;
@@ -2573,7 +2461,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     display: flex;
     align-items: center;
     gap: 3.125rem;
-    justify-content: space-between
+    justify-content: center
   }
   .achievments__texts {
     flex: 0 0 30%
@@ -2613,7 +2501,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     margin-bottom: 9.375rem
   }
   .info-about:not(:last-child) {
-    margin-bottom: 9.375rem
+    margin-bottom: 4.375rem
   }
   .consult {
     padding-top: 10.625rem
@@ -2645,14 +2533,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .infrastruktura__list {
     gap: 4.375rem
   }
-  .budivnyctvo__heading {
-    margin-bottom: 4.375rem
-  }
-  .budivnyctvo__heading {
-    display: flex;
-    gap: 1.875rem;
-    align-items: flex-end
-  }
   .product__main-block:not(:last-child) {
     margin-bottom: 5rem
   }
@@ -2675,10 +2555,13 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     margin-bottom: 3.125rem
   }
   .achievments {
-    padding-top: 6.25rem
+    padding-bottom: 4.375rem
   }
-  .achievments {
-    padding-bottom: 6.25rem
+  .achievments__count {
+    font-size: 3rem
+  }
+  .achievments__label {
+    font-size: 1.25rem
   }
   .team {
     padding-top: 6.25rem
@@ -2699,9 +2582,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     display: block;
     margin: 0 auto
   }
-  .budivnyctvo__offer:not(:last-child) {
-    margin-bottom: 1.875rem
-  }
 }
 @media (max-width:61.99875em) {
   #video .popup__content {
@@ -2709,12 +2589,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
   .double-block__right {
     padding: .625rem
-  }
-  .info-about__main:not(:last-child) {
-    margin-bottom: 1.875rem
-  }
-  .bloquotes__bloquote {
-    margin-bottom: .625rem
   }
   .consult__window {
     padding: 5.875rem 1.75rem
@@ -2735,11 +2609,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     height: 100%;
     -o-object-fit: cover;
     object-fit: cover
-  }
-  .road {
-    overflow-x: auto;
-    overflow-y: hidden;
-    padding-bottom: .625rem
   }
   .achievments__texts {
     margin-bottom: 1.25rem
@@ -2807,8 +2676,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .result-rozstrochka__count {
     font-size: 1.75rem
   }
-  .budivnyctvo__swiper--big {
-    margin-bottom: .625rem
+  .card-budivnyctvo__content {
+    margin: -3.125rem 1.25rem 0
   }
   .main-product__content {
     margin-bottom: 1.25rem
@@ -2889,7 +2758,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     margin-bottom: 4.375rem
   }
   .info-about:not(:last-child) {
-    margin-bottom: 4.375rem
+    margin-bottom: 3.125rem
   }
   .consult {
     padding-top: 3.75rem
@@ -2921,9 +2790,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .infrastruktura__list {
     gap: 2.5rem
   }
-  .budivnyctvo__heading {
-    margin-bottom: 2.5rem
-  }
   .product__main-block:not(:last-child) {
     margin-bottom: 2.5rem
   }
@@ -2946,10 +2812,13 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     margin-bottom: 1.875rem
   }
   .achievments {
-    padding-top: 3.125rem
-  }
-  .achievments {
     padding-bottom: 3.125rem
+  }
+  .achievments__count {
+    font-size: 1.5rem
+  }
+  .achievments__label {
+    font-size: .875rem
   }
   .team {
     padding-top: 3.125rem
@@ -2990,7 +2859,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     margin-bottom: clamp(4.375rem ,2.460106383rem + 8.5106382979vw ,9.375rem)
   }
   .info-about:not(:last-child) {
-    margin-bottom: clamp(4.375rem ,2.460106383rem + 8.5106382979vw ,9.375rem)
+    margin-bottom: clamp(3.125rem ,2.6462765957rem + 2.1276595745vw ,4.375rem)
   }
   .consult {
     padding-top: clamp(3.75rem ,1.1170212766rem + 11.7021276596vw ,10.625rem)
@@ -3022,9 +2891,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .infrastruktura__list {
     gap: clamp(2.5rem ,1.7819148936rem + 3.1914893617vw ,4.375rem)
   }
-  .budivnyctvo__heading {
-    margin-bottom: clamp(2.5rem ,1.7819148936rem + 3.1914893617vw ,4.375rem)
-  }
   .product__main-block:not(:last-child) {
     margin-bottom: clamp(2.5rem ,1.5425531915rem + 4.2553191489vw ,5rem)
   }
@@ -3047,10 +2913,13 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     margin-bottom: clamp(1.875rem ,1.3962765957rem + 2.1276595745vw ,3.125rem)
   }
   .achievments {
-    padding-top: clamp(3.125rem ,1.9281914894rem + 5.3191489362vw ,6.25rem)
+    padding-bottom: clamp(3.125rem ,2.6462765957rem + 2.1276595745vw ,4.375rem)
   }
-  .achievments {
-    padding-bottom: clamp(3.125rem ,1.9281914894rem + 5.3191489362vw ,6.25rem)
+  .achievments__count {
+    font-size: clamp(1.5rem ,.9255319149rem + 2.5531914894vw ,3rem)
+  }
+  .achievments__label {
+    font-size: clamp(.875rem ,.7313829787rem + .6382978723vw ,1.25rem)
   }
   .team {
     padding-top: clamp(3.125rem ,1.9281914894rem + 5.3191489362vw ,6.25rem)
