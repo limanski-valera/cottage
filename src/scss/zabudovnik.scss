@@ -79,14 +79,13 @@
 }
 //========================================================================================================================================================
 .achievments {
-	@include adaptiveValue('padding-top', 100, 50);
-	@include adaptiveValue('padding-bottom', 100, 50);
+	@include adaptiveValue('padding-bottom', 70, 50);
 	&__container {
 		@media (min-width: $tablet) {
 			display: flex;
 			align-items: center;
 			gap: toRem(50);
-			justify-content: space-between;
+			justify-content: center;
 		}
 	}
 	&__texts {
@@ -108,6 +107,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		gap: toRem(30);
+		justify-content: center;
 		@media (max-width: $tablet) {
 			gap: toRem(20);
 		}
@@ -126,13 +126,14 @@
 		box-shadow: 0 0 10px $textLightColor;
 	}
 	&__count {
-		font-size: toRem(36);
+		@include adaptiveValue('font-size', 48, 24);
 	}
 	&__label {
-		font-weight: 300;
 		display: flex;
 		flex-direction: column;
 		gap: toRem(10);
+		text-transform: uppercase;
+		@include adaptiveValue('font-size', 20, 14);
 		&::before {
 			content: '';
 			height: toRem(1);
