@@ -104,25 +104,17 @@
 }
 .info-about {
 	&:not(:last-child) {
-		@include adaptiveValue('margin-bottom', 150, 70);
+		@include adaptiveValue('margin-bottom', 70, 50);
 	}
 	&__container {
-		@media (min-width: $tablet) {
-			display: grid;
-			grid-template-columns: repeat(2, 1fr);
-			gap: toRem(100);
-			align-items: center;
-		}
 	}
 	&__main {
 		display: flex;
 		flex-direction: column;
 		gap: toRem(30);
-		@media (max-width: $tablet) {
-			&:not(:last-child) {
-				margin-bottom: toRem(30);
-			}
-		}
+		text-align: center;
+		max-width: toRem(700);
+		margin: 0 auto;
 	}
 	&__titles {
 		display: flex;
@@ -136,51 +128,6 @@
 	&__text {
 	}
 	&__button {
-	}
-	&__bloquotes {
-	}
-}
-.bloquotes {
-	display: flex;
-	flex-direction: column;
-	gap: toRem(30);
-	&__item {
-	}
-	&__bloquote {
-		margin-bottom: toRem(20);
-		display: block;
-		font-style: italic;
-		font-weight: 300;
-		@media (max-width: $tablet) {
-			margin-bottom: toRem(10);
-		}
-	}
-	&__author {
-		display: flex;
-		gap: toRem(15);
-		align-items: center;
-	}
-	&__avatar {
-		width: toRem(50);
-		height: toRem(50);
-		border-radius: 50%;
-		overflow: hidden;
-		img {
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-		}
-	}
-	&__author-info {
-		display: flex;
-		flex-direction: column;
-		gap: toRem(5);
-	}
-	&__author-name {
-	}
-	&__author-position {
-		color: $textLightColor;
-		font-weight: 300;
 	}
 }
 .swiper-slide {
