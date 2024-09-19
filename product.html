@@ -6,7 +6,7 @@
 	<meta charset="UTF-8" />
 	<meta name="format-detection" content="telephone=no" />
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240919110052" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20240919233828" />
 	<link rel="shortcut icon" href="favicon.ico" />
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -44,6 +44,65 @@
 			}
 		};
 	</script>
+	<style>
+		.lottie-wrapper {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 200;
+			background-color: #fff;
+			display: flex;
+			justify-content: center;
+			padding: 50px;
+			pointer-events: none;
+			transition: opacity 1s;
+		}
+
+		#dotlottie-canvas {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			max-width: 100%;
+			width: 50%;
+			transition:
+				width 2s,
+				top 2s,
+				transform 2s,
+				left 2s;
+		}
+
+		._hide-lottie #dotlottie-canvas {
+			width: 350px;
+			top: 0;
+			transform: translateX(-50%) translateY(-13%);
+		}
+
+		._hide-lottie .lottie-wrapper {
+			transition: opacity 1s 2s;
+			opacity: 0;
+		}
+
+		@media (max-width: 767.98px) {
+			#dotlottie-canvas {
+				width: 100%;
+			}
+
+			._hide-lottie #dotlottie-canvas {
+				width: 250px;
+				top: 0;
+				left: 0;
+				transform: translateX(-14%) translateY(-10%);
+			}
+
+			._hide-lottie .lottie-wrapper {
+				transition: opacity 1s 2s;
+				opacity: 0;
+			}
+		}
+	</style>
 </head>
 
 <body>
@@ -561,8 +620,8 @@
 			</div>
 		</div>
 	</div>
-	<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit&_v=20240919110052" async defer></script>
-	<script src="js/app.min.js?_v=20240919110052"></script>
+	<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit&_v=20240919233828" async defer></script>
+	<script src="js/app.min.js?_v=20240919233828"></script>
 
 </body>
 
