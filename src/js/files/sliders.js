@@ -104,44 +104,6 @@ function initSliders() {
 			on: {},
 		});
 	}
-	if (document.querySelector('.budivnyctvo__swiper--big') && document.querySelector('.budivnyctvo__swiper--small')) {
-		// Вказуємо склас потрібного слайдера
-		// Створюємо слайдер
-		const bigSlider = new Swiper('.budivnyctvo__swiper--big', {
-			modules: [Controller, Navigation, Pagination],
-			observer: true,
-			observeParents: true,
-			slidesPerView: 1,
-			spaceBetween: 10,
-			speed: 800,
-			navigation: {
-				prevEl: '.swiper-button-prev',
-				nextEl: '.swiper-button-next',
-			},
-			pagination: {
-				el: '.swiper-pagination',
-				type: 'fraction',
-			},
-		});
-		const smallSlider = new Swiper('.budivnyctvo__swiper--small', {
-			modules: [Controller],
-			observer: true,
-			observeParents: true,
-			slidesPerView: 3,
-			spaceBetween: 10,
-			speed: 800,
-
-			slideToClickedSlide: true,
-			breakpoints: {
-				767.98: {
-					direction: 'vertical',
-				},
-			},
-		});
-
-		bigSlider.controller.control = smallSlider;
-		smallSlider.controller.control = bigSlider;
-	}
 	if (document.querySelector('.main-product__slider')) {
 		new Swiper('.main-product__slider', {
 			modules: [Navigation, Pagination, EffectFade],
