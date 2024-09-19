@@ -18,7 +18,7 @@
 			display: flex;
 			flex-direction: column;
 			gap: toRem(40);
-            align-items: center;
+			align-items: center;
 		}
 	}
 	&__logo-wrapper {
@@ -26,7 +26,8 @@
 			grid-column: span 2;
 		}
 	}
-	&__logo {
+	&__logo,
+	.custom-logo-link {
 		width: toRem(100);
 		@media (max-width: $pc) {
 			width: toRem(150);
