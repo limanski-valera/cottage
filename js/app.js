@@ -8793,7 +8793,7 @@ PERFORMANCE OF THIS SOFTWARE.
         new X2({
             autoplay: true,
             canvas: document.querySelector("#dotlottie-canvas"),
-            src: "../files/BEVERLY HILLS LOTTIE.json",
+            src: "../files/lottie.json",
             speed: 1.5
         });
         setTimeout((() => {
