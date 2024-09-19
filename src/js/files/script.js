@@ -160,20 +160,16 @@ function initForms() {
 }
 
 function initLottie() {
-	const dotLottie = new DotLottie({
+	new DotLottie({
 		autoplay: true,
 		canvas: document.querySelector('#dotlottie-canvas'),
-		src: '../../files/BEVERLY HILLS LOTTIE.json',
+		src: '../files/lottie.json',
 		speed: 1.5,
 	});
 
 	setTimeout(() => {
 		document.documentElement.classList.add('_hide-lottie');
 	}, 3000);
-
-	// dotLottie.addEventListener('complete', () => {
-	// 	document.documentElement.classList.add('_hide-lottie');
-	// });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
