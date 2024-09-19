@@ -2,6 +2,9 @@
 <html lang="en">
 	@@include('html/_head.htm',{ "title":"Генеральний план" })
 	<body>
+		<div class="lottie-wrapper">
+			<canvas id="dotlottie-canvas"></canvas>
+		</div>
 		<div class="wrapper">
 			@@include('html/_header.htm',{})
 			<main class="page page-general">
@@ -2115,7 +2118,6 @@
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>
-		@@include('html/_popup-video.htm',{})
-		@@include('html/_js.htm',{})
+		@@include('html/_popup-video.htm',{}) @@include('html/_js.htm',{})
 	</body>
 </html>

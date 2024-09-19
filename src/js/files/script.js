@@ -3,6 +3,8 @@ import { isMobile } from './functions.js';
 // Підключення списку активних модулів
 import { flsModules } from './modules.js';
 
+import { DotLottie } from '@lottiefiles/dotlottie-web';
+
 function initPlan() {
 	const messageEl = document.querySelector('.general-plan__house-status');
 
@@ -157,12 +159,27 @@ function initForms() {
 	});
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-	if (document.querySelector('.general-plan')) {
-		initPlan();
-	}
+function initLottie() {
+	const dotLottie = new DotLottie({
+		autoplay: true,
+		canvas: document.querySelector('#dotlottie-canvas'),
+		src: '../../files/BEVERLY HILLS LOTTIE.json',
+		speed: 1.5,
+	});
 
-	if (document.querySelector('form')) {
-		initForms();
-	}
+	setTimeout(() => {
+		document.documentElement.classList.add('_hide-lottie');
+	}, 3000);
+
+	// dotLottie.addEventListener('complete', () => {
+	// 	document.documentElement.classList.add('_hide-lottie');
+	// });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+	if (document.querySelector('.general-plan')) initPlan();
+
+	if (document.querySelector('form')) initForms();
+
+	if (document.querySelector('#dotlottie-canvas')) initLottie();
 });
