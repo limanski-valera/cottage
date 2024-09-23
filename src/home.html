@@ -3,34 +3,100 @@
 	@@include('html/_head.htm',{ "title":"Головна" })
 	<body>
 		<div class="wrapper">
-			@@include('html/_header-transparent.htm',{})
+			@@include('html/_header.htm',{})
 			<main class="home-page">
-				<section class="main-block">
-					<img src="@img/cottage/01.jpg" alt="cottage" />
-					<div class="main-block__container">
-						<div class="main-block__offer">
-							<h2 class="main-block__sub-title">Prydesennya ECO Village</h2>
-							<h1 class="main-block__title">Дім, в якому хочеться жити</h1>
-							<div class="main-block__text text">
-								Еко-містечко на 7 гектарах землі на берегу Десни в 20 хвилинах від Києва. Оберіть таунхаус, дуплекс чи котедж або розпочніть власний бізнес в комерції Prydesennya Eco
-								Village.
+				<section class="home-page__main">
+					<h1 class="home-page__title title">Генеральний план Prydesennya Eco Village</h1>
+					<img src="@img/plan/01.jpg" alt="" />
+				</section>
+				<section class="home-page__gallery home-gallery">
+					<h2 class="home-gallery__title title">Простір твоєї мрії</h2>
+					<div data-gallery class="home-gallery__list">
+						<a href="@img/plan/03.jpg" class="home-gallery__link">
+							<div class="home-gallery__item">
+								<img data-src="@img/plan/03.jpg" alt="">
 							</div>
-							<button type="button" data-popup="#video" data-popup-youtube="K-_29IrHutg" class="main-block__action">
-								<span class="main-block__action-button">
-									<span class="_icon-play"></span>
-								</span>
-								<span class="main-block__action-text">Відеообліт</span>
-							</button>
-						</div>
+						</a>
+						<a href="@img/plan/04.jpg" class="home-gallery__link">
+							<div class="home-gallery__item">
+								<img data-src="@img/plan/04.jpg" alt="">
+							</div>
+						</a>
+						<a href="@img/plan/05.jpeg" class="home-gallery__link">
+							<div class="home-gallery__item">
+								<img data-src="@img/plan/05.jpeg" alt="">
+							</div>
+						</a>
+						<a href="@img/plan/06.jpg" class="home-gallery__link">
+							<div class="home-gallery__item">
+								<img data-src="@img/plan/06.jpg" alt="">
+							</div>
+						</a>
+						<a href="@img/plan/07.jpeg" class="home-gallery__link">
+							<div class="home-gallery__item">
+								<img data-src="@img/plan/07.jpeg" alt="">
+							</div>
+						</a>
+						<a href="@img/plan/08.jpeg" class="home-gallery__link">
+							<div class="home-gallery__item">
+								<img data-src="@img/plan/08.jpeg" alt="">
+							</div>
+						</a>
+						<a href="@img/plan/09.jpeg" class="home-gallery__link">
+							<div class="home-gallery__item">
+								<img data-src="@img/plan/09.jpeg" alt="">
+							</div>
+						</a>
+						<a href="@img/plan/10.jpeg" class="home-gallery__link">
+							<div class="home-gallery__item">
+								<img data-src="@img/plan/10.jpeg" alt="">
+							</div>
+						</a>
+						<a href="@img/plan/11.jpeg" class="home-gallery__link">
+							<div class="home-gallery__item">
+								<img data-src="@img/plan/11.jpeg" alt="">
+							</div>
+						</a>
+						<a href="@img/plan/12.jpeg" class="home-gallery__link">
+							<div class="home-gallery__item">
+								<img data-src="@img/plan/12.jpeg" alt="">
+							</div>
+						</a>
+						<a href="@img/plan/13.jpeg" class="home-gallery__link">
+							<div class="home-gallery__item">
+								<img data-src="@img/plan/13.jpeg" alt="">
+							</div>
+						</a>
+						<a href="@img/plan/14.jpeg" class="home-gallery__link">
+							<div class="home-gallery__item">
+								<img data-src="@img/plan/14.jpeg" alt="">
+							</div>
+						</a>
+						<a href="@img/plan/15.jpeg" class="home-gallery__link">
+							<div class="home-gallery__item">
+								<img data-src="@img/plan/15.jpeg" alt="">
+							</div>
+						</a>
+						<a href="@img/plan/16.jpeg" class="home-gallery__link">
+							<div class="home-gallery__item">
+								<img data-src="@img/plan/16.jpeg" alt="">
+							</div>
+						</a>
+						<a href="@img/plan/17.jpeg" class="home-gallery__link">
+							<div class="home-gallery__item">
+								<img data-src="@img/plan/17.jpeg" alt="">
+							</div>
+						</a>
+						<a href="@img/plan/18.jpeg" class="home-gallery__link">
+							<div class="home-gallery__item">
+								<img data-src="@img/plan/18.jpeg" alt="">
+							</div>
+						</a>
 					</div>
-					<a href="generalniy-plan.html" class="main-block__button button button--transperent">Генеральний план</a>
 				</section>
 			</main>
+			@@include('html/_footer.htm',{})
 		</div>
-		@@include('html/_call-button.htm',{})
-		@@include('html/_popup.htm',{})
-		@@include('html/_popup-video.htm',{})
-		@@include('html/_popup-contacts.htm',{})
-		@@include('html/_js.htm',{})
+		@@include('html/_call-button.htm',{}) @@include('html/_popup.htm',{}) @@include('html/_popup-video.htm',{}) @@include('html/_popup-contacts.htm',{}) @@include('html/_js.htm',{})
 	</body>
 </html>
