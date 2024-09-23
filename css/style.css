@@ -941,67 +941,6 @@ body::after {
   transition: transform .3s ease-out;
   transition: transform .3s ease-out,-webkit-transform .3s ease-out
 }
-.page-general {
-  padding-top: 9.375rem
-}
-.general-plan {
-  overflow-x: auto;
-  position: relative
-}
-.general-plan__wrapper {
-  min-width: 100rem;
-  position: relative
-}
-.general-plan__bg {
-  width: 100%
-}
-.general-plan__container {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-  width: 100%;
-  padding-top: 1.875rem;
-  z-index: 3;
-  pointer-events: none
-}
-.general-plan__button {
-  pointer-events: all
-}
-.general-plan__house-status {
-  position: fixed;
-  padding: .3125rem .625rem;
-  border-radius: 5px;
-  display: inline-block;
-  z-index: 90;
-  background-color: #fcfcf7;
-  box-shadow: 0 0 5px #434441;
-  pointer-events: none;
-  display: none;
-  font-size: .75rem
-}
-.genplan-schema-svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2
-}
-.points {
-  cursor: pointer
-}
-.sold_out path:first-child {
-  fill: #c42705
-}
-.active path:first-child {
-  stroke: transparent;
-  stroke-width: 2px
-}
-.booked path:first-child {
-  fill: #ff9737
-}
 .about-page {
   padding-top: 8.125rem
 }
@@ -2626,9 +2565,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     gap: 2.5rem;
     align-items: center
   }
-  .general-plan__button {
-    font-size: .75rem
-  }
   .main-product__slide {
     height: 15.625rem
   }
@@ -2947,16 +2883,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .home-gallery__item:hover img {
     -webkit-transform: scale(1.05);
     transform: scale(1.05)
-  }
-  .active:hover path {
-    fill: #477523
-  }
-  .active:hover path:first-child {
-    stroke: #477523;
-    fill: #fff
-  }
-  .booked:hover path:first-child {
-    fill: #e28b3d
   }
   .card-blog__image img:hover {
     scale: 1.05
